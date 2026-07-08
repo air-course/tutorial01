@@ -2,8 +2,10 @@ import subprocess
 import wget
 from pathlib import Path
 import os
+import time
 
 def download_video(video_url):
+    time.sleep(1)
     os.makedirs("videos", exist_ok=True)
     input_path = wget.download(video_url, out="videos/")
     
